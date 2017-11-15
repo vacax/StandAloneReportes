@@ -1,11 +1,24 @@
 apply plugin: 'java'
 apply plugin: 'groovy'
+apply plugin: 'application'
 
 sourceCompatibility = 1.7
 version = '1.0'
 
+mainClassName = "edu.pucmm.ia.sar.main.Main"
+
+//Para compilar el groovy antes java,
+// https://discuss.gradle.org/t/how-to-compile-groovy-sources-mixed-with-java-sources/6859/4
+sourceSets.main.java.srcDirs = []
+sourceSets.main.groovy.srcDirs += ["src/main/java", "/src/main/resources"]
+
+
 repositories {
     mavenCentral()
+    //caso: https://stackoverflow.com/questions/40326906/grails-jasper-plugin-dependency-download-error
+    maven{
+        url "http://jaspersoft.artifactoryonline.com/jaspersoft/third-party-ce-artifacts/"
+    }
 }
 
 dependencies {

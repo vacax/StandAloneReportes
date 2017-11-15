@@ -20,7 +20,7 @@ class ReporteServices {
     public JasperPrint getReporteSimple(){
 
         //Cargando el reporte desde el Jar del proyecto. Reporte compilado.
-        JasperReport reporte = (JasperReport) JRLoader.loadObject(this.getClass().getResource("/edu/pucmm/ia/groovy/reportes/PruebaReporte.jasper"));
+        JasperReport reporte = (JasperReport) JRLoader.loadObject(this.getClass().getResource("/reportes/PruebaReporte.jasper"));
 
         //Mandando a ejecutar el proyecto.
         JasperPrint print = JasperFillManager.fillReport(reporte, null);
@@ -38,7 +38,7 @@ class ReporteServices {
         Sql con = BaseDatosServices.instancia.conexion;
 
         //Cargando el reporte desde el Jar del proyecto. Reporte compilado.
-        JasperReport reporte = (JasperReport) JRLoader.loadObject(this.getClass().getResource("/edu/pucmm/ia/groovy/reportes/PruebaEstudiante.jasper"));
+        JasperReport reporte = (JasperReport) JRLoader.loadObject(this.getClass().getResource("/reportes/PruebaEstudiante.jasper"));
 
         //Mandando a ejecutar el proyecto.
         JasperPrint print = JasperFillManager.fillReport(reporte, null ,con.connection);
@@ -62,7 +62,7 @@ class ReporteServices {
         parametros.put("matricula", matricula) //Nombre del parametro del reporte para el key y el value el tipo que corresponde.
 
         //Cargando el reporte desde el Jar del proyecto. Reporte compilado.
-        JasperReport reporte = (JasperReport) JRLoader.loadObject(this.getClass().getResource("/edu/pucmm/ia/groovy/reportes/PruebaEstudianteParametro.jasper"));
+        JasperReport reporte = (JasperReport) JRLoader.loadObject(this.getClass().getResource("/reportes/PruebaEstudianteParametro.jasper"));
 
         //Mandando a ejecutar el proyecto.
         JasperPrint print = JasperFillManager.fillReport(reporte, parametros ,con.connection);
@@ -81,7 +81,7 @@ class ReporteServices {
         EstudianteJRDataSource datos = new EstudianteJRDataSource();
 
         //Cargando el reporte desde el Jar del proyecto. Reporte compilado.
-        JasperReport reporte = (JasperReport) JRLoader.loadObject(this.getClass().getResource("/edu/pucmm/ia/groovy/reportes/PruebaEstudiante.jasper"));
+        JasperReport reporte = (JasperReport) JRLoader.loadObject(this.getClass().getResource("/reportes/PruebaEstudiante.jasper"));
 
         //Mandando a ejecutar el proyecto.
         JasperPrint print = JasperFillManager.fillReport(reporte, null , datos);

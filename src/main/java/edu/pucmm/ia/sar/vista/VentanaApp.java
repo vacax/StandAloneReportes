@@ -4,6 +4,7 @@ import edu.pucmm.ia.groovy.servicios.ReporteServices;
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.view.JasperViewer;
 
+import javax.annotation.PostConstruct;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -23,11 +24,24 @@ public class VentanaApp extends JFrame {
 
     private ReporteServices reporteServices;
 
-    /**
-     *
-     */
+
     public VentanaApp(){
         super("Proyecto StandAlone para JasperReport");
+
+        miPanel =new JPanel();
+
+        visualizarReporteButton = new JButton("Visualización");
+        reporteConexionButton = new JButton("Conexión Reporte");
+        reporteParametrosButton = new JButton("Reporte Parametros");
+        exportarPDFButton = new JButton("Exportar");
+        reporteJRDataSourceButton = new JButton("JRDataSource");
+
+        miPanel.add(visualizarReporteButton);
+        miPanel.add(reporteConexionButton);
+        miPanel.add(reporteParametrosButton);
+        miPanel.add(exportarPDFButton);
+        miPanel.add(reporteJRDataSourceButton);
+
         this.getContentPane().add(miPanel);
         this.pack();
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
