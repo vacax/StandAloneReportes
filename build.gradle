@@ -1,6 +1,9 @@
-apply plugin: 'java'
-apply plugin: 'groovy'
-apply plugin: 'application'
+plugins {
+    id 'java'
+    id 'groovy'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '5.2.0'
+}
 
 sourceCompatibility = 1.7
 version = '1.0'
