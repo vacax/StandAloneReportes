@@ -30,5 +30,5 @@ dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.3.7'
     compile 'com.jgoodies:forms:1.2.1'
     compile 'com.h2database:h2:1.4.182'
-    compile 'com.lowagie:itext:4.2.1'
+    //compile 'com.lowagie:itext:4.2.1'
 }

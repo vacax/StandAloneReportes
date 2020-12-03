@@ -4,7 +4,6 @@ import edu.pucmm.ia.groovy.servicios.ReporteServices;
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.view.JasperViewer;
 
-import javax.annotation.PostConstruct;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
